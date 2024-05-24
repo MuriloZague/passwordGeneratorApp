@@ -1,1 +1,1 @@
-<h1>Um App para criação de senha desenvolvido em React Native</h1>
+<h1>Um App para criação de senhas desenvolvido em React Native</h1>
