@@ -9,7 +9,6 @@ export function ModalPassword({ password, handleClose }) {
  async function handleCopyPassword(){
     await Clipboard.setStringAsync(password);
     await saveItem("@pass", password)
-
     handleClose();
  }
 
@@ -27,7 +26,7 @@ export function ModalPassword({ password, handleClose }) {
 
             <View style={styles.buttons}>
                 <TouchableOpacity style={[styles.buttonBack, styles.button]} onPress={handleClose}>
-                    <Text style={styles.buttonTextBack}>Voltar</Text>
+                    <Text style={styles.buttonTextBack}>Não Salvar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.buttonSave, styles.button]} onPress={handleCopyPassword}>
                     <Text style={styles.buttonTextSave}>Salvar Senha</Text>
