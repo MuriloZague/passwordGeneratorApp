@@ -2,6 +2,11 @@
   "expo": {
     "name": "passwordGenerator",
     "slug": "passwordGenerator",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "983b3c17-cc0d-4c2c-a70a-1dee73dbcc4e"
+      }
+    }
   }
 }
