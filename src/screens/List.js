@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, Text, StyleSheet, FlatList, VirtualizedList, Alert } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useIsFocused } from "@react-navigation/native";
 import useStorage from "../hooks/useStorage";
@@ -28,6 +28,25 @@ export function Passwords(){
         setListPasswords(passwords)
     }
 
+    const confirmDelete = (item) => {
+        Alert.alert(
+          "Confirmar Exclusão",
+          "Tem certeza de que deseja excluir esta senha?",
+          [
+            {
+              text: "Não",
+              
+            },
+            {
+              text: "Sim",
+              onPress: () => handleDeletePassword(item),
+              
+            }
+          ],
+          { cancelable: true }
+        );
+      };
+
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
@@ -35,10 +54,11 @@ export function Passwords(){
             </View>
             <View style={styles.content}>
                 <FlatList
+                    showsVerticalScrollIndicator={false}
                     style={{ flex: 1, paddingTop: 14, }}
                     data={listPasswords}
                     keyExtractor={(item) => String(item)}
-                    renderItem={({ item }) => <PasswordItem data={item} removePassword={() => handleDeletePassword(item)}/>}
+                    renderItem={({ item }) => <PasswordItem data={item} removePassword={() => confirmDelete(item)}/>}
                 />
             </View>
         </SafeAreaView>
