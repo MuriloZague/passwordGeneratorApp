@@ -20,4 +20,5 @@
 <div align='center'>
   <h2>Senha copiada:</h2>
 <img src="https://i.ibb.co/MCWpxpJ/copied-PASSWORD.jpg" alt="paginainicial-PASSWORD" border="0" widht='100px' height='800px'>
+  <p>(OnPress)</p>
 </div>
