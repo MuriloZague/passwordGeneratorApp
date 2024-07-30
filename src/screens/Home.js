@@ -47,7 +47,7 @@ export default function Home() {
         <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={generatePassword}>
 
             <Text style={styles.buttonText}>
-            Gerar Senha
+                Gerar Senha
             </Text>
         </TouchableOpacity>
 
