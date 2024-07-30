@@ -33,7 +33,6 @@ export default function Home() {
         <Text style={styles.title}>{caracteres.toFixed(0)} caracteres</Text>
 
     <View style={styles.area}>
-
         <Slider style={{ height: 35 }}
         minimumValue={6}
         maximumValue={25}
@@ -43,7 +42,6 @@ export default function Home() {
         value={caracteres}
         onValueChange={(value) => setCaracteres(value)}
         />
-
     </View>
 
         <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={generatePassword}>
